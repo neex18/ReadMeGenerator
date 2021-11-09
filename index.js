@@ -30,22 +30,22 @@ inquirer
     },
     {
         type: 'input',
-        message: 'What license is required?',
+        message: 'Select the license required',
         name: 'license',
     },
     {
         type: 'input',
-        message: 'Github URL',
+        message: 'What is your GitHub user name?',
         name: 'Github',
     },
     {
         type: 'input',
-        message: 'Github URL',
-        name: 'Github',
+        message: 'What is your email address?',
+        name: 'Email',
     },
     {
         type: 'input',
-        message: 'Github URL',
+        message: 'What is your',
         name: 'Github',
     },
   ])
