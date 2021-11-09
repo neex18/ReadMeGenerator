@@ -1,7 +1,22 @@
+// TODO: Include packages needed for this application
+
+// TODO: Create an array of questions for user input
+const questions = [];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {}
+
+// TODO: Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
+
+
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-inquirer
+const question = [inquirer
   .prompt([
     {
       type: 'input',
@@ -82,7 +97,9 @@ inquirer
         validate: (value)=> { if(value){return true}
         else {return 'Please provide and answer to continue'}}
     },
-  ])
+  ])]
   .then(({
     Title, Description, Installation, Report, Contribute, Usage, License, GitHub, Email,
-  })=>{fs.writeFile('README.md')})
+  })=>{fs.writeFile('README.md',
+
+  )})
