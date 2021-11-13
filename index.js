@@ -15,6 +15,7 @@ init();
 
 const inquirer = require('inquirer');
 const fs = require('fs')
+const generateMarkdown = require('./utils/generateMarkDown')
 
 inquirer
   .prompt([
@@ -95,6 +96,6 @@ inquirer
   {
     import {sayHi} from './sayHi.js';
     fs.writeFile('README.md',
-    ${data.Title}
+    `${data.Title}`
 
   )})
