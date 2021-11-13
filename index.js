@@ -72,7 +72,7 @@ inquirer
         type: 'list',
         message: 'Select the license required',
         name: 'license',
-        choices: ['The MIT license', 'The GPL license', 'Apache license', 'GNU license', 'N/A'],
+        choices: ['MIT', 'GPL', 'Apache', 'Eclpise', 'N/A'],
         validate: (value)=> { if(value){return true}
         else {return 'Please provide and answer to continue'}}
     },
@@ -91,8 +91,10 @@ inquirer
         else {return 'Please provide and answer to continue'}}
     },
   ])
-  .then(({
-    Title, Description, Installation, Report, Contribute, Usage, License, GitHub, Email,
-  })=>{fs.writeFile('README.md',
+  .then(({answers})=>
+  {
+    import {sayHi} from './sayHi.js';
+    fs.writeFile('README.md',
+    ${data.Title}
 
   )})
