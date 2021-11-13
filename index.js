@@ -16,7 +16,7 @@ init();
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-const question = [inquirer
+inquirer
   .prompt([
     {
       type: 'input',
@@ -90,14 +90,7 @@ const question = [inquirer
         validate: (value)=> { if(value){return true}
         else {return 'Please provide and answer to continue'}}
     },
-    {
-        type: 'input',
-        message: 'What is your',
-        name: 'Github',
-        validate: (value)=> { if(value){return true}
-        else {return 'Please provide and answer to continue'}}
-    },
-  ])]
+  ])
   .then(({
     Title, Description, Installation, Report, Contribute, Usage, License, GitHub, Email,
   })=>{fs.writeFile('README.md',
