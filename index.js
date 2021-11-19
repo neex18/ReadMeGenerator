@@ -99,3 +99,6 @@ inquirer
     `${data.Title}`
 
   )})
+  // ${renderLicenseBadge(data.license)}
+  // return `# ${data.title}, ${data.description}, ${data.installation}, ${data.test},
+  // ${data.report}, ${data.contribute}
