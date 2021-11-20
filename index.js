@@ -17,9 +17,10 @@ const inquirer = require('inquirer');
 const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkDown')
 
-inquirer
-  .prompt([
-    {
+
+// TODO: Create an array of questions for user input
+const questions = [
+     {
       type: 'input',
       message: 'What is the title of the project?',
       name: 'Title',
@@ -91,14 +92,16 @@ inquirer
         validate: (value)=> { if(value){return true}
         else {return 'Please provide and answer to continue'}}
     },
-  ])
-  .then(({answers})=>
-  {
-    import {sayHi} from './sayHi.js';
-    fs.writeFile('README.md',
-    `${data.Title}`
+  ];
 
-  )})
+
+  // .then(({answers})=>
+  // {
+  //   import {sayHi} from './sayHi.js';
+  //   fs.writeFile('README.md',
+  //   `${data.Title}`
+
+  // )})
   // ${renderLicenseBadge(data.license)}
   // return `# ${data.title}, ${data.description}, ${data.installation}, ${data.test},
   // ${data.report}, ${data.contribute}
